@@ -19,14 +19,7 @@ int main() {
             tabuleiro[i][j] = '0';
         }
     }
-
-    // Cabeçalho com letras
-    for (i = 0; i < 10; i++) {
-        printf(" %c ", linha[i]);
-    }
-    printf("\n");
-
-    // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
+      // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
 
       // Navio vertical (coluna 2, linhas 3 a 5)
     for (i = 2; i <= 4; i++) {
@@ -40,8 +33,8 @@ int main() {
 
     // Sugestão: Utilize `printf` para exibir as coordenadas de cada parte dos navios.
 
-    printf(" TABULEIRO BATALHA NAVAL\n\n");
-    printf("    ");  // Espaço para alinhar cabeçalho
+    printf("---   TABULEIRO BATALHA NAVAL ---\n");
+    printf("   ");  // Espaço para alinhar cabeçalho
 
     // Cabeçalho com letras
     for (i = 0; i < 10; i++) {
