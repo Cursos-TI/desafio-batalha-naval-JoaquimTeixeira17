@@ -6,9 +6,59 @@
 
 int main() {
     // Nível Novato - Posicionamento dos Navios
+
+
     // Sugestão: Declare uma matriz bidimensional para representar o tabuleiro (Ex: int tabuleiro[5][5];).
+   char linha[10] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
+   int coluna[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+   int i;
+   int j;
+   int tabuleiro[10][10];
+
+   // Inicializa o tabuleiro com água
+    for (i = 0; i < 10; i++) {
+        for (j = 0; j < 10; j++) {
+            tabuleiro[i][j] = '0';
+        }
+    }
+
+    // Cabeçalho com letras
+    for (i = 0; i < 10; i++) {
+        printf(" %c ", linha[i]);
+    }
+    printf("\n");
+
     // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
+
+      // Navio vertical (coluna 2, linhas 3 a 5)
+    for (i = 2; i <= 4; i++) {
+        tabuleiro[i][1] = '3';
+    }
+
+    // Navio horizontal (linha 8, colunas 5 a 7)
+    for (j = 4; j <= 6; j++) {
+        tabuleiro[7][j] = '4';
+    }
+
     // Sugestão: Utilize `printf` para exibir as coordenadas de cada parte dos navios.
+
+    printf(" TABULEIRO BATALHA NAVAL\n\n");
+    printf("    ");  // Espaço para alinhar cabeçalho
+
+    // Cabeçalho com letras
+    for (i = 0; i < 10; i++) {
+        printf(" %c ", linha[i]);
+    }
+    printf("\n");
+
+    // Impressão do tabuleiro
+    for (j = 0; j < 10; j++) {
+        printf("%2d ", coluna[j]);  // Numeração das linhas
+        for (i = 0; i < 10; i++) {
+            printf(" %c ", tabuleiro[j][i]);
+        }
+        printf("\n");
+    }
 
     // Nível Aventureiro - Expansão do Tabuleiro e Posicionamento Diagonal
     // Sugestão: Expanda o tabuleiro para uma matriz 10x10.
